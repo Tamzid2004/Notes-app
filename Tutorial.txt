@@ -1,0 +1,67 @@
+Step-by-Step Tutorial: Building The Notes App
+
+This tutorial explains exactly how this notes app works and how to build it.
+
+Step 1: Set Up the Page Layout:
+
+1. Create a main container for the app.(index.html)
+2. Add a header that includes:
+■ An icon (like a pencil) to visually represent notes.
+■ The title “Notes”.
+3. Add a button for adding notes. This button also has a small icon next to the text.
+4. Below the button, add an empty section that will hold all notes dynamically.
+
+Step 2: Style the App(style.css)
+
+1. Set a full-page gradient background and a readable font.
+2. Style the header:
+■ Make the text large and bold.
+■ Position the icon next to the text.
+3. Style the Add Note button:
+● Give it a gradient background and rounded corners.
+● Place the icon inside the button next to the text.
+4. Style the notes container:
+■ Each note should be a rectangular editable area.
+■ Make the note background white and the text dark for readability.
+■ Give notes rounded corners and padding.
+5. Add a delete icon inside each note:
+■ Positioned at the bottom-right corner.
+■ Easy to click to remove the note.
+
+Step 3: Add Interactivity(script.js)
+
+● Adding Notes:
+         When the user clicks the Add Note button:
+         1. Create a new editable note box.
+         2. Add a delete icon inside it.
+         3. Insert the note into the notes container.
+         4. Save the updated list of notes into the browser’s storage.
+● Deleting Notes:
+         1.Detect clicks on the delete icon.
+         2.Remove the corresponding note from the container.
+
+Update the storage so it no longer appears after refreshing.
+
+
+Editing Notes:
+1.Make each note editable directly in the browser.
+2.Any change (typing, deleting text) updates the stored notes automatically.
+3.Ensure pressing Enter creates a new line instead of exiting the note.
+
+Step 4: Save Notes Between Sessions
+
+Use the browser’s local storage to save notes.
+
+When the page loads:
+1. Check if notes exist in storage.
+2. If yes, display them in the notes container.
+
+Whenever a note is added, edited, or deleted, update the stored notes. This ensures all changes persist even after refreshing the page.
+
+ Summary:
+
+1. Header with title and icon.
+2. Add Note button with icon.
+3. Notes container to hold dynamic notes.
+4. Notes are editable, deletable, and persist via localStorage.
+5. JavaScript handles creating, updating, deleting, and saving notes.
